@@ -6,7 +6,7 @@ const userSchema = new Schema({
   password: {type:String, required:true},
   email: {type:String, required:true},
   name: {type:String, required:true},
-  location: {type:String, required:true},
+  location: String,
   bonsais: [{type:Schema.Types.ObjectId, ref:'Bonsai'}],
 });
 

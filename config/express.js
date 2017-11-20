@@ -31,6 +31,7 @@ module.exports = function(app){
   }));
   app.use((req, res, next) => {
     res.locals.user = req.user;
+    res.locals.title = "My bonsai";
     next();
   });
   app.use(passport.initialize());

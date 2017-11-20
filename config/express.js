@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const logger = require('morgan');
+const favicon = require('serve-favicon');
 const path = require('path');
 const passport = require('passport');
 const mongoose = require('mongoose');
@@ -15,6 +16,7 @@ module.exports = function(app){
   app.set('views', config.rootPath+'views');
   app.set("view engine", "ejs");
   app.set('layout', 'layout/main-layout');
+  app.use(favicon(config.rootPath+'public/images/superfavicon.ico'));
   app.use(expressLayouts);
   app.use(logger('dev'));
   app.use(bodyParser.json());

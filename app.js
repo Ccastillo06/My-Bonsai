@@ -5,7 +5,6 @@ require('./config/express')(app);
 require('./config/expresscontroller')(app);
 
 const index = require('./routes/index');
-
 app.use('/', index);
 
 require('./config/error-handler')(app);

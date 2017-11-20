@@ -1,0 +1,26 @@
+<div class="signup-form">
+  <form action="/auth/signup" method="POST">
+    <div class="input">
+      <label for="username">Username</label><br>
+      <input type="text" name="username" placeholder="BonsaiLover">
+    </div>
+    <div class="input">
+      <label for="password">Password</label><br>
+      <input type="text" name="password" placeholder="Password">
+    </div>
+    <div class="input">
+      <label for="email">Email</label><br>
+      <input type="text" name="email" placeholder="bonsai@bonsai.com">
+    </div>
+    <div class="input">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" placeholder="Jon Bonsai">
+    </div>
+    <div class="input">
+      <input id="h-input" type="hidden" name="location">
+    </div>
+    <button>Sign Up!</button>
+  </form>
+</div>
+
+<script type="text/javascript" src="/javascripts/geolocation.js"></script>

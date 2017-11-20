@@ -44,7 +44,7 @@ module.exports = function (){
 
 
   passport.use('local-login', new LocalStrategy((username, password, next) => {
-    User.findOne({ email:username }, (err, user) => {
+    User.findOne({ username:username }, (err, user) => {
       if (err) {
         return next(err);
       }

@@ -21,7 +21,7 @@ authController.post('/login', ensureLoggedOut(), passport.authenticate('local-lo
   failureRedirect : '/auth/login'
 }));
 
-authController.get('/logout', ensureLoggedIn(), (req,res)=>{
+authController.get('/logout', ensureLoggedIn('/'), (req,res)=>{
   req.logout();
   res.redirect('/');
 });

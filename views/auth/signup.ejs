@@ -1,5 +1,5 @@
 <div class="signup-form">
-  <form action="/signup" method="POST">
+  <form action="/signup" method="POST" enctype="multipart/form-data">
     <div class="input">
       <label for="username">Username</label><br>
       <input type="text" name="username" placeholder="BonsaiLover">
@@ -15,6 +15,10 @@
     <div class="input">
       <label for="name">Name</label><br>
       <input type="text" name="name" placeholder="Jon Bonsai">
+    </div>
+    <div class="input">
+      <label for="photo">Profile Picture</label>
+      <input type="file" name="photo">
     </div>
     <div class="input">
       <input id="h-input" type="hidden" name="location">

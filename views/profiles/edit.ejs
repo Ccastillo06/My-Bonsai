@@ -1,0 +1,21 @@
+<% if(errorMessage != '') { %>
+  <p><%= errorMessage %></p>
+<% } %>
+<div class="edit-form">
+  <form action="/profile/edit" method="POST" enctype="multipart/form-data">
+    <div class="input">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" value='<%= user.name %>'>
+    </div>
+    <div class="input">
+      <label for="photo">Profile Picture</label>
+      <input type="file" name="photo">
+    </div>
+    <div class="input">
+      <input id="h-input" type="text" name="location">
+    </div>
+    <button>Edit</button>
+  </form>
+</div>
+
+<script type="text/javascript" src="/javascripts/geolocation.js"></script>

@@ -31,7 +31,7 @@ module.exports = function (){
               else {
                   const { username, password, email, name, location } = req.body;
                   const hashPass = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-                  const newUser = new User({username, email, password: hashPass, name, location});
+                  const newUser = new User({username, email, password: hashPass, name, photo: req.file.filename, location});
 
                   newUser.save((err) => {
                       if (err){ next(err); }

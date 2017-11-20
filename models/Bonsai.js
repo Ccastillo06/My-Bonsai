@@ -10,7 +10,7 @@ const bonsaiSchema = new Schema({
   temperature: Number,
   watering: String,
   substratum: String,
-  maintenances: [{type:Schema.Type.ObjectId, ref:'Maintenance'}],
+  maintenances: [{type:Schema.Types.ObjectId, ref:'Maintenance'}],
 });
 
 const Bonsai = mongoose.model('Bonsai', bonsaiSchema);

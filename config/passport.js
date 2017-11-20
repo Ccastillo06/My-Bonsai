@@ -1,7 +1,7 @@
 const passport = require("passport");
 const flash = require("connect-flash");
 const bcrypt = require('bcrypt');
-// const User = require('../models/User');
+const User = require('../models/User');
 const dotenv = require ("dotenv").load();
 const LocalStrategy = require("passport-local").Strategy;
 const session = require('express-session');

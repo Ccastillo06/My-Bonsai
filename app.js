@@ -8,9 +8,11 @@ require('./config/expresscontroller')(app);
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 const profile = require('./routes/profile');
+const bonsai = require('./routes/bonsai');
 app.use('/', index);
 app.use('/', auth);
 app.use('/profile', profile);
+app.use('/bonsai', bonsai);
 
 require('./config/error-handler')(app);
 

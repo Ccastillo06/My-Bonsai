@@ -11,6 +11,7 @@ const bonsaiSchema = new Schema({
   watering: String,
   substratum: String,
   maintenances: [{type:Schema.Types.ObjectId, ref:'Maintenance'}],
+  photo: String,
 });
 
 const Bonsai = mongoose.model('Bonsai', bonsaiSchema);

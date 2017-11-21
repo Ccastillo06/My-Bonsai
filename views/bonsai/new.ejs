@@ -1,0 +1,28 @@
+<% if (error != "") {%>
+  <p><%= error %></p>
+<% } %>
+<div class="new-bonsai-form">
+  <form action="/bonsai/new" method="POST" enctype="multipart/form-data">
+    <div class="input">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" value=''>
+    </div>
+    <div class="dropdown">
+      <label for="name">Specie</label><br>
+      <select>
+        <% species.forEach(specie => { %>
+          <option value="<%=specie.specie %>"><%=specie.specie %></option>
+        <%});%>
+      </select>
+    </div>
+    <div class="input">
+      <label for="age">Age</label><br>
+      <input type="number" name="age" value=''>
+    </div>
+    <div class="input">
+      <label for="photo">Bonsai Picture</label>
+      <input type="file" name="photo">
+    </div>
+    <button>Add</button>
+  </form>
+</div>

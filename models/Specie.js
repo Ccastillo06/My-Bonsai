@@ -10,6 +10,8 @@ const specieSchema = new Schema({
   watering: String,
   substratum: String,
   feeding: String,
+  photo: String,
+  location: String,
 });
 
 const Specie = mongoose.model('Specie', specieSchema);

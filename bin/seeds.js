@@ -20,6 +20,8 @@ const species = [
     substratum: "Light acid substratum (70% akadama - 30% kiryuzuna).",
     feeding: "It has a late awakening, we must wait until it starts sprouting to "+
     "fertilize it both in spring and autumn",
+    photo: "FicusMicrocarpa.jpg",
+    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Juniper Bonsai.",
@@ -34,7 +36,9 @@ const species = [
     "Before you water, the soil should dry slightly.",
     substratum: "Needs a good drainage. 70% akadama - 30% kiryuzuna works perfect with it.",
     feeding: "In spring just before starting to sprout and in autumn, after the"+
-    "summer lethargy."
+    "summer lethargy.",
+    photo: "JuniperBonsai.jpg",
+    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucia"],
   },
   {
     specie: "Japanese Maple.",
@@ -50,7 +54,9 @@ const species = [
     "even several times a day during the hottest days, if the soil is well-drained "+
     "and the tree healthy and vigorous.",
     substratum: "Needs a good substratum. 70% akadama - 30% kiryuzuna works perfect with it.",
-    feeding: "Always during spring and autumn. Use always slow-release organic solid fertilizers."
+    feeding: "Always during spring and autumn. Use always slow-release organic solid fertilizers.",
+    photo: "JapaneseMaple.jpg",
+    location: [],
   },
   {
     specie: "Chinese Elm.",
@@ -63,7 +69,9 @@ const species = [
     temperature: "Supports temperatures greather than 45 degrees C but can't drop below 5 degrees C.",
     watering: "It should be given water generously whenever the soil gets slightly dry.",
     substratum: "Needs a good substratum. 70% akadama - 30% kiryuzuna works perfect with it.",
-    feeding: "Always during spring and autumn. Use always slow-release organic solid fertilizers."
+    feeding: "Always during spring and autumn. Use always slow-release organic solid fertilizers.",
+    photo: "ChineseElm.jpg",
+    location: [],
   },
   {
     specie: "Carmona Bonsai.",
@@ -77,7 +85,9 @@ const species = [
     watering: "Keep the tree moist, as it doesn’t like droughts. But be careful "+
     "not to water too often because it doesn't like soil wetness either",
     substratum: "Substratum must contain a 65% of akadama, 25% of ground and 10% of sand.",
-    feeding: "Solid organic fertilizer is appropriate for the Fukien Tea Bonsai because its roots are sensitive."
+    feeding: "Solid organic fertilizer is appropriate for the Fukien Tea Bonsai because its roots are sensitive.",
+    photo: "CarmonaBonsai.jpg",
+    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Azalea.",
@@ -90,7 +100,9 @@ const species = [
     watering: "Azalea Bonsai trees must not dry out but they also don't like permanent wetness. "+
     "Because of this it is necessary to check the moisture of the soil very carefully.",
     substratum: "Needs an acid and draining substratum, like Kunuma.",
-    feeding: "During the growing season azalea Bonsai should be fed with a special azalea or rhododendron fertilizer."
+    feeding: "During the growing season azalea Bonsai should be fed with a special azalea or rhododendron fertilizer.",
+    photo: "AzaleaBonsai.jpg",
+    location: [],
   },
   {
     specie: "Japanese Black Pine.",
@@ -103,10 +115,12 @@ const species = [
     temperature: "The tree holds low temperatures below zero.",
     watering: "Lots of water with a good draining substratum.",
     substratum: "As this tree needs iron, use 50% akadama - 50% kiryuzuna.",
-    feeding: "Use always solid organic fertilizer. If you don't have kiryuzuna, add iron suplements."
+    feeding: "Use always solid organic fertilizer. If you don't have kiryuzuna, add iron suplements.",
+    photo: "JapaneseBlackPine.jpg",
+    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucia"],
   },
   {
-    specie: "Serissa Foetida.",
+    specie: "Serissa Phoetida.",
     scientific_name: "Snow Rose.",
     decription: "The Serissa is a small shrub that flowers two (sometimes even three) "+
     "times per year. The roughly shaped trunks and tiny leaves make this tree very popular "+
@@ -115,7 +129,9 @@ const species = [
     temperature: "Minimum temperature is about 10 degrees Celsius.",
     watering: "Water the tree regularly, it should never dry out.",
     substratum: "Well draining, use 50% akadama - 50% kiryuzuna.",
-    feeding: "Fertilize in low quantities about once or twice monthly in the growth season."
+    feeding: "Fertilize in low quantities about once or twice monthly in the growth season.",
+    photo: "SerissaPhoetida.jpg",
+    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Bald Cypress.",
@@ -124,10 +140,12 @@ const species = [
     "needle-shaped leaves which develop a nice auburn colour in autumn before they fall "+
     "off along with some of the smaller twigs.",
     weather: "Needs a lot of light and warmth and should therefore be placed in full sun during the growing season",
-    temperature: "Must be protected against very low temperatures as it tolerates hardly any frost when it is planted in a container..",
+    temperature: "Must be protected against very low temperatures as it tolerates hardly any frost when it is planted in a container.",
     watering: "It should never dry out. In summer needs a lot of water.",
     substratum: "Works rigth in any type of substratum.",
-    feeding: "Use always solid organic fertilizer in the growth season."
+    feeding: "Use always solid organic fertilizer in the growth season.",
+    photo: "BaldCypressBonsai.jpg",
+    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   }
 ];
 

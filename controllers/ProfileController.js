@@ -7,7 +7,6 @@ module.exports = {
     Specie.find({}).then(species => {
       species = species.filter(e => {
         if(e.location.indexOf(req.user.location.city) == -1) {
-          console.log(e.location, req.user.location.city)
           return e;
         }
       });

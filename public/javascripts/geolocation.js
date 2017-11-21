@@ -3,7 +3,7 @@ $(document).ready(() => {;
   setCity = (lat,long) => {
     $.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=AIzaSyCfl8r72Mtkm-4ZX27CKFWxVMD79n6ZW8M')
     .then(data => {
-      $('#city').val(data.results[3].formatted_address);
+      $('#city').val(data.results[3].formatted_address.split(",")[0]);
       $('#lat').val(data.results[3].geometry.location.lat);
       $('#lng').val(data.results[3].geometry.location.lng);
     })

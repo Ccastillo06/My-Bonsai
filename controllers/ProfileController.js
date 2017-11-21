@@ -1,8 +1,19 @@
 const User = require("../models/User");
+const Specie = require("../models/Specie");
 
 module.exports = {
   // Profile Controllers.
-  profileGet: (req,res) => {res.render('profiles/profile');},
+  profileGet: (req,res) => {
+    Specie.find({}).then(species => {
+      species = species.filter(e => {
+        if(e.location.indexOf(req.user.location.city) == -1) {
+          console.log(e.location, req.user.location.city)
+          return e;
+        }
+      });
+      res.render('profiles/profile', {species});
+    });
+  },
 
   profileEditGet: (req,res) => {res.render('profiles/edit', {errorMessage: ''});},
   profileEditPost: (req,res) => {

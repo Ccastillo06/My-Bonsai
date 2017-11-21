@@ -11,7 +11,7 @@ const specieSchema = new Schema({
   substratum: String,
   feeding: String,
   photo: String,
-  location: String,
+  location: [String],
 });
 
 const Specie = mongoose.model('Specie', specieSchema);

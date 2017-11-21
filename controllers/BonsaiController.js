@@ -44,7 +44,6 @@ module.exports = {
     User.findOne({_id: req.user._id})
     .populate('bonArray')
     .then(user => {
-      console.log(user)
       res.render('bonsai/collection', {user: user});
     })
     .catch(() => res.redirect('/profile'));

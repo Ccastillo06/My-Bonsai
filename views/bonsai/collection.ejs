@@ -1,1 +1,10 @@
-HOLA
+<h2>My Bonsais</h2>
+<% bonsais.forEach( e => { %>
+  <div class="bonsai">
+    <h4><%= e.name %></h4>
+    <img src="/uploads/<%= e.photo %>" alt="">
+    <p><b>Sprecies: </b><%= e.species %></p>
+    <p><b>Age: </b><%= e.age %></p>
+  </div>
+  <a href="/bonsai/collection/<%=e._id%>"></a>
+<% } %>

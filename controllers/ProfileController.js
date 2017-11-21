@@ -6,10 +6,17 @@ module.exports = {
 
   profileEditGet: (req,res) => {res.render('profiles/edit', {errorMessage: ''});},
   profileEditPost: (req,res) => {
+    let photo = '';
+    (req.file)? photo = req.file.filename : photo = req.user.photo;
+    const location = {
+      city: req.body.city,
+      lat: req.body.lat,
+      lng: req.body.lng,
+    };
     const update = {
       name: req.body.name,
-      photo: req.file.filename,
-      location: req.body.location,
+      photo,
+      location,
     };
     User.findByIdAndUpdate(req.user._id, update).then( () => {
       res.redirect('/profile');

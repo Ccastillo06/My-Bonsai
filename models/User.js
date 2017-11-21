@@ -6,7 +6,11 @@ const userSchema = new Schema({
   password: {type:String, required:true},
   email: {type:String, required:true},
   name: {type:String, required:true},
-  location: String,
+  location: {
+    city: {type: String},
+    lat: Number,
+    lng: Number,
+  },
   photo: String,
   bonsais: [{type:Schema.Types.ObjectId, ref:'Bonsai'}],
 });

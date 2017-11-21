@@ -29,9 +29,16 @@ module.exports = function (){
               if (err){ return next(err); }
               if (user) { return next(null, false); }
               else {
-                  const { username, password, email, name, location } = req.body;
+                  const { username, password, email, name } = req.body;
+                  const location = {
+                    city: req.body.city,
+                    lat: req.body.lat,
+                    lng: req.body.lng,
+                  };
                   const hashPass = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-                  const newUser = new User({username, email, password: hashPass, name, photo: req.file.filename, location});
+                  let photo = '';
+                  (req.file)? photo = req.file.filename : photo = 'logo.png';
+                  const newUser = new User({username, email, password: hashPass, name, photo, location});
 
                   newUser.save((err) => {
                       if (err){ next(err); }

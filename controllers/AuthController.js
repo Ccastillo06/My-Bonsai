@@ -5,7 +5,7 @@ module.exports = {
   // Sign Up Controllers.
   signUpGet: (req, res, next)  => { res.render('auth/signup');},
   signUpPost: passport.authenticate('local-signup', {
-    successRedirect : '/',
+    successRedirect : '/profile',
     failureRedirect : '/signup'
   }),
   // Login Controllers.

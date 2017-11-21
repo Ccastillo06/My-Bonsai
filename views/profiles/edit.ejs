@@ -12,10 +12,16 @@
       <input type="file" name="photo">
     </div>
     <div class="input">
-      <input id="h-input" type="text" name="location">
+      <input id="lat" type="hidden" name="lat" value="<%=user.location.lat%>">
+      <input id="lng" type="hidden" name="lng" value="<%=user.location.lng%>">
+    </div>
+    <div class="gglmap">
+      <input id="pac-input" class="controls" type="text" value="<%=user.location.city%>" name="city" placeholder="Search Box">
+      <div id="map"></div>
     </div>
     <button>Edit</button>
   </form>
 </div>
 
-<script type="text/javascript" src="/javascripts/geolocation.js"></script>
+<script type="text/javascript" src="/javascripts/mapmark.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfl8r72Mtkm-4ZX27CKFWxVMD79n6ZW8M&libraries=places&callback=initAutocomplete"></script>

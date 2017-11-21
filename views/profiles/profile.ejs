@@ -1,4 +1,9 @@
 <h1>Hello <%= user.username %></h1>
-<img src="/uploads/<%=user.photo%>" alt="profile-photo" height="300px">
+<% if(user.photo == 'logo.png'){ %>
+  <img src="/images/<%=user.photo%>" alt="profile-photo" height="300px">
+<%} else {%>
+  <img src="/uploads/<%=user.photo%>" alt="profile-photo" height="300px">
+<% } %>
+<a href="/"><button>Home</button></a>
 <a href="/profile/edit"><button>Edit Profile</button></a>
 <a href="/bonsai/new"><button>Add Bonsai</button></a>

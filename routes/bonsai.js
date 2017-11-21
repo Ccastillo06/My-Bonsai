@@ -8,4 +8,5 @@ const uploader = multer({dest:'./public/uploads'});
 router.get('/new', ensureLoggedIn('/'), bonsaiController.bonsaiNewGet);
 // router.post('/edit', [ensureLoggedIn('/'), uploader.single('photo')], profileController.profileEditPost);
 
+router.get('/collection', ensureLoggedIn('/'), bonsaiController.bonsaiCollectionGet);
 module.exports = router;

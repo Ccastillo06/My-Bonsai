@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
@@ -10,6 +10,7 @@ a {
 #map {
   height: 350px;
   width: 70%;
+  margin: 0 auto;
 }
 
 /*  GOOGLE MAPS */

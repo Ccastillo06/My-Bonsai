@@ -12,7 +12,7 @@ const userSchema = new Schema({
     lng: Number,
   },
   photo: String,
-  bonsais: [{type:Schema.Types.ObjectId, ref:'Bonsai'}],
+  bonArray: [{type:Schema.Types.ObjectId, ref:'Bonsai'}],
 });
 
 const User = mongoose.model('User', userSchema);

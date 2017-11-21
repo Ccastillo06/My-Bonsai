@@ -7,7 +7,7 @@ module.exports = {
   // Bonsai Controllers.
   bonsaiNewGet: (req,res) => {
     Species.find({})
-    .then (species => {res.render('bonsai/new', {species, error: ''})})
+    .then (species => {res.render('bonsai/new', {species, error: ''});})
     .catch (() => {res.render('bonsai/new', {error: "Couldn't charge species values"});});
   },
 
@@ -26,17 +26,26 @@ module.exports = {
         substratum: specie.substratum,
         photo: req.file.filename,
       });
-      newBonsai.save()
-      .then(() => res.redirect('/profile'))
-      .catch(() => res.redirect('/profile'));
+      User.findByIdAndUpdate(
+          req.user._id,
+          {$push: {"bonArray": {_id: newBonsai._id}}},
+          {safe: true, new : true}
+        ).then(() => {
+        newBonsai.save()
+        .then(() => res.redirect('/profile'))
+        .catch(() => res.redirect('/profile'));
+      }).catch(e => {
+          res.redirect('/profile');
+      });
+    });
+  },
 
-  })},
-  
   bonsaiCollectionGet: (req,res) => {
-    User.findById(req.user._id)
-    .populate('bonsais')
+    User.findOne({_id: req.user._id})
+    .populate('bonArray')
     .then(user => {
-      res.render('bonsai/collection'), {user: user}
+      console.log(user)
+      res.render('bonsai/collection', {user: user});
     })
     .catch(() => res.redirect('/profile'));
   },

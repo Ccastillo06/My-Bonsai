@@ -30,7 +30,6 @@ module.exports = {
         substratum: specie.substratum,
         photo,
       });
-      console.log(newBonsai);
       User.findByIdAndUpdate(
           req.user._id,
           {$push: {"bonArray": {_id: newBonsai._id}}},
@@ -58,7 +57,6 @@ module.exports = {
     Bonsai.findOne({_id: req.params.id})
     .populate("maintenances")
     .then(bonsai => {
-      console.log (bonsai);
       res.render('bonsai/details', {bonsai});
     })
     .catch(() => res.redirect('/bonsai/collection'));

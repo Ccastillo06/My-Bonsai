@@ -15,4 +15,20 @@
 <p><b>Watering: </b> <%= bonsai.watering%></p><br>
 <p><b>Substratum: </b> <%= bonsai.substratum%></p><br>
 
+<h2>Maintenances:</h2>
+<% bonsai.maintenances.forEach( maintenance => { %>
+  <p><b><%= maintenance.date.toString().substring(4, 15)%> - <%= maintenance.type%></b></p>
+  <% if(maintenance.photo == 'workFiller.png'){ %>
+    <img src="/images/<%=maintenance.photo%>" alt="user-bonsai-photo" height="300px">
+  <%} else {%>
+    <img src="/uploads/<%=maintenance.photo%>" alt="user-bonsai-photo" height="300px">
+  <% } %>
+  <p><b><%= maintenance.description%></b></p>
+  <% if(maintenance.periodicity == 0){ %>
+    <p>Repeat this work when your little tree needs it</p>
+  <%} else {%>
+    <p>Repeat this work in: <%= maintenance.periodicity%> months</p>
+  <% } %>
+<% }); %>
+
 <a href="/bonsai/maintenance/<%=bonsai._id%>"><button>Add new maintenance</button></a>

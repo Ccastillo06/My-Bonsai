@@ -9,7 +9,7 @@ router.get('/new', ensureLoggedIn('/'), bonsaiController.bonsaiNewGet);
 router.post('/new', [ensureLoggedIn('/'), uploader.single('photo')], bonsaiController.bonsaiNewPost);
 
 router.get('/maintenance/:id', ensureLoggedIn('/'), bonsaiController.bonsaiMaintenanceGet);
-router.post('/maintenance/:id', ensureLoggedIn('/'), bonsaiController.bonsaiMaintenancePost);
+router.post('/maintenance/:id', [ensureLoggedIn('/'), uploader.single('photo')], bonsaiController.bonsaiMaintenancePost);
 
 router.get('/collection', ensureLoggedIn('/'), bonsaiController.bonsaiCollectionGet);
 

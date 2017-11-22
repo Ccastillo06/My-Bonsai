@@ -6,6 +6,7 @@ const bonsaiMaintenanceSchema = new Schema({
   type: {type:String, required: true},
   periodicity: {type:Number, required: true},
   date: Date,
+  photo: String,
 },{
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });

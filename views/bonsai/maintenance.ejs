@@ -2,7 +2,7 @@
   <p><%= error %></p>
 <% } %>
 <div class="new-maintenance-form">
-  <form action="/bonsai/maintenance/<%=id%>" method="POST">
+  <form action="/bonsai/maintenance/<%=id%>" method="POST" enctype="multipart/form-data">
     <div class="input">
       <label for="description">Notes:</label><br>
       <input type="text" name="description" value=''>
@@ -18,6 +18,10 @@
     <div class="input">
       <label for="date">Date of the work:</label><br>
       <input type="date" name="date" value=''>
+    </div>
+    <div class="input">
+      <label for="photo">Maintenance Photo</label>
+      <input type="file" name="photo">
     </div>
     <button>Add</button>
   </form>

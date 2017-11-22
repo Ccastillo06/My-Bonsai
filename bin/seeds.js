@@ -9,7 +9,7 @@ const species = [
   {
     specie: "Ficus Microcarpa.",
     scientific_name: "Ficus Microcarpa.",
-    decription: "The ficus genus belongs to the family of mulberry plants (Moraceae) "+
+    description: "The ficus genus belongs to the family of mulberry plants (Moraceae) "+
     "and is the most popular indoor tree species for beginners at Bonsai. "+
     "It has a thick, pot-bellied trunk, similar to the Ginseng root. Sometimes "+
     "it is grafted with Ficus microcarpa leaves.",
@@ -26,7 +26,7 @@ const species = [
   {
     specie: "Juniper Bonsai.",
     scientific_name: "Juniperus.",
-    decription: "The juniper is a genus of about 50 - 70 species within the " +
+    description: "The juniper is a genus of about 50 - 70 species within the " +
     "cypress family. They are evergreen coniferous trees or shrubs, which are very "+
     "popular for Bonsai purposes.",
     weather: "Needs a bright spot with lots of sunlight.",
@@ -43,7 +43,7 @@ const species = [
   {
     specie: "Japanese Maple.",
     scientific_name: "Acer Palmatum.",
-    decription: "The green Japanese Maple (Acer palmatum) is originally from Japan, "+
+    description: "The green Japanese Maple (Acer palmatum) is originally from Japan, "+
     "China and Korea. It owes its botanical name to the hand-shaped leaves with in "+
     "most cases five pointed lobes (palma is the Latin word for the palm of hand). "+
     "The bark of younger trees is normally green or reddish and turns light grey or grayish brown with age.",
@@ -61,7 +61,7 @@ const species = [
   {
     specie: "Chinese Elm.",
     scientific_name: "Ulmus Parviflora.",
-    decription: "The Chinese Elm (Ulmus parvifolia) is endemic to south-east Asia and "+
+    description: "The Chinese Elm (Ulmus parvifolia) is endemic to south-east Asia and "+
     "especially China. In its home countries it can become a mighty tree up to 25 m tall "+
     "and with 1 m trunk diameter. The Chinese Elm develops a fine ramification and small "+
     "leaves very easily which makes it a very good Bonsai plant",
@@ -76,7 +76,7 @@ const species = [
   {
     specie: "Carmona Bonsai.",
     scientific_name: "Fukien Tea.",
-    decription: "The Fukien Tea is originally from China and it was named after the province Fukien, "+
+    description: "The Fukien Tea is originally from China and it was named after the province Fukien, "+
     "in Chinese Fuijan. It is also endemic in parts of Japan, Indonesia, Taiwan and Australia. "+
     "The Fukien Tea is still very popular for Penjing in China and in Western countries it is a "+
     "common indoor Bonsai tree.",
@@ -92,7 +92,7 @@ const species = [
   {
     specie: "Azalea.",
     scientific_name: "Rhododendron.",
-    decription: "The Rhododendron genus contains about 1000 species, of which especially "+
+    description: "The Rhododendron genus contains about 1000 species, of which especially "+
     "the Satsuki (Rhododendron indicum) and Kurume azalea (Rhododendron kiusianum and "+
     "Rhododendron kaempferi) are commonly used for Bonsai.",
     weather: "Azaleas thrive at a sunny spot, but during the hottest time it is better to provide some shade.",
@@ -107,7 +107,7 @@ const species = [
   {
     specie: "Japanese Black Pine.",
     scientific_name: "Pinus.",
-    decription: "For Bonsai, pines are especially popular and many people even regard them "+
+    description: "For Bonsai, pines are especially popular and many people even regard them "+
     "as the most typical Bonsai trees. Pine trees are evergreen, coniferous resinous "+
     "trees with needles that appear in bundles of two to five.",
     weather: "Always needs a lot of sun for keeping its leaves as little as possible. "+
@@ -122,7 +122,7 @@ const species = [
   {
     specie: "Serissa Phoetida.",
     scientific_name: "Snow Rose.",
-    decription: "The Serissa is a small shrub that flowers two (sometimes even three) "+
+    description: "The Serissa is a small shrub that flowers two (sometimes even three) "+
     "times per year. The roughly shaped trunks and tiny leaves make this tree very popular "+
     "as indoor Bonsai tree.",
     weather: "Much sunlight is necessary, choose a spot where the tree doesn’t need to be relocated and at a constant temperature.",
@@ -136,7 +136,7 @@ const species = [
   {
     specie: "Bald Cypress.",
     scientific_name: "Taxodium distichum.",
-    decription: "The Bald Cypress is a tall tree with reddish brown bark and soft, "+
+    description: "The Bald Cypress is a tall tree with reddish brown bark and soft, "+
     "needle-shaped leaves which develop a nice auburn colour in autumn before they fall "+
     "off along with some of the smaller twigs.",
     weather: "Needs a lot of light and warmth and should therefore be placed in full sun during the growing season",

@@ -6,7 +6,7 @@ const bonsaiSchema = new Schema({
   species: {type:String, required: true},
   age: {type: Number, required: true},
   scientific_name: String,
-  decription: String,
+  description: String,
   weather: String,
   temperature: String,
   watering: String,

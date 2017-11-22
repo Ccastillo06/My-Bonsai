@@ -57,7 +57,6 @@ module.exports = {
     Bonsai.findOne({_id: req.params.id})
     .populate("maintenances")
     .then(bonsai => {
-      console.log (bonsai);
       res.render('bonsai/details', {bonsai});
     })
     .catch(() => res.redirect('/bonsai/collection'));

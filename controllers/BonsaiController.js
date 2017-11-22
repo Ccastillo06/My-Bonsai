@@ -16,6 +16,8 @@ module.exports = {
   bonsaiNewPost: (req,res) => {
     Species.findOne({"specie" : req.body.specie})
     .then(specie => {
+      let photo = '';
+      (req.file)? photo = req.file.filename : photo = 'bonsaiFiller.png';
       const newBonsai = new Bonsai ({
         name: req.body.name,
         species: req.body.specie,
@@ -26,7 +28,7 @@ module.exports = {
         temperature: specie.temperature,
         watering: specie.watering,
         substratum: specie.substratum,
-        photo: req.file.filename,
+        photo,
       });
       User.findByIdAndUpdate(
           req.user._id,

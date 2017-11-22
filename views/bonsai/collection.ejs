@@ -2,9 +2,15 @@
 <% user.bonArray.forEach( e => { %>
   <div class="bonsai">
     <h4><%= e.name %></h4>
-    <img src="/uploads/<%= e.photo %>" alt="bonsai" height="200">
+    <% if(e.photo == 'bonsaiFiller.png'){%>
+      <img src="/images/<%= e.photo %>" alt="bonsai" height="200">
+    <%} else {%>
+      <img src="/uploads/<%= e.photo %>" alt="bonsai" height="200">
+    <%}%>
     <p><b>Sprecies: </b><%= e.species %></p>
     <p><b>Age: </b><%= e.age %></p>
       <a href="/bonsai/collection/<%=e._id%>"><button>View Details</button></a>
   </div>
 <% }); %>
+
+<a href="/profile"><button>My Profile</button></a>

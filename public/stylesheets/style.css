@@ -1,19 +1,62 @@
+/*
+font-family: 'Indie Flower', cursive;
+font-family: 'Amatic SC', cursive;
+*/
+
 body {
-  padding: 50px;
   text-align: center;
+  padding: 100px;
 }
 
-a {
-  color: #00B7FF;
+.main-navbar {
+  background-color: #26A65B;
+  padding: 10px;
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 5px;
 }
 
+.icon-bar {
+  color: white;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.navbar-brand {
+  font-size: 2.5em;
+}
+
+.logo {
+  display: inline-block;
+  float: left;
+  margin: 5px 0;
+}
+
+.main-navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-right {
+  font-size: 1.5em;
+}
+
+.navbar-right li {
+  margin: 5px 10px;
+}
+
+/*  GOOGLE MAPS */
 #map {
   height: 350px;
   width: 70%;
   margin: 0 auto;
 }
 
-/*  GOOGLE MAPS */
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;

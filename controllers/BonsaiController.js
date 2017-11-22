@@ -77,13 +77,15 @@ module.exports = {
   bonsaiMaintenancePost: (req,res) => {
     Maintenance.findOne({"type" : req.body.type})
     .then(type => {
+      let photo = '';
+      (req.file)? photo = req.file.filename : photo = 'workFiller.png';
       const newMaintenance = new BonsaiMaintenance ({
         description: req.body.description,
         type: type.type,
         periodicity: type.periodicity,
         date: req.body.date,
+        photo: photo,
       });
-
       Bonsai.findByIdAndUpdate(
           req.params.id,
           {$push: {"maintenances": {_id: newMaintenance._id}}},

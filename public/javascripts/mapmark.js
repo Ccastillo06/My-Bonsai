@@ -1,3 +1,8 @@
+communityArray = [
+  "Pais Vasco","Galicia","Castilla-La Mancha","Castilla y León","Madrid",
+  "Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja","Andalucía",
+  "Murcia", "Comunidad Valenciana", "Islas Baleares", "Islas Canarias"];
+
 initAutocomplete = () => {
   let lat = parseInt($('#lat').val());
   let lng = parseInt($('#lng').val());
@@ -55,6 +60,14 @@ initAutocomplete = () => {
          title: place.name,
          position: place.geometry.location
        }));
+       let community = place.address_components[0].long_name;
+       if(communityArray.indexOf(community) == -1) {
+         community = place.address_components[1].long_name;
+       }
+       if (communityArray.indexOf(community) == -1) {
+         community = place.address_components[2].long_name;
+       }
+       $('#h-city').val(community);
        $('#lng').val(place.geometry.viewport.b.b);
        $('#lat').val(place.geometry.viewport.f.b);
        if (place.geometry.viewport) {

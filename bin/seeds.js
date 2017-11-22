@@ -21,7 +21,7 @@ const species = [
     feeding: "It has a late awakening, we must wait until it starts sprouting to "+
     "fertilize it both in spring and autumn",
     photo: "FicusMicrocarpa.jpg",
-    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
+    location: ["País Vasco","Galicia","Castilla-La Mancha","Castilla y León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Juniper Bonsai.",
@@ -38,7 +38,7 @@ const species = [
     feeding: "In spring just before starting to sprout and in autumn, after the"+
     "summer lethargy.",
     photo: "JuniperBonsai.jpg",
-    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucia"],
+    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucía"],
   },
   {
     specie: "Japanese Maple.",
@@ -87,7 +87,7 @@ const species = [
     substratum: "Substratum must contain a 65% of akadama, 25% of ground and 10% of sand.",
     feeding: "Solid organic fertilizer is appropriate for the Fukien Tea Bonsai because its roots are sensitive.",
     photo: "CarmonaBonsai.jpg",
-    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
+    location: ["País Vasco","Galicia","Castilla-La Mancha","Castilla y León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Azalea.",
@@ -117,7 +117,7 @@ const species = [
     substratum: "As this tree needs iron, use 50% akadama - 50% kiryuzuna.",
     feeding: "Use always solid organic fertilizer. If you don't have kiryuzuna, add iron suplements.",
     photo: "JapaneseBlackPine.jpg",
-    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucia"],
+    location: ["Comunidad Valenciana","Canarias","Islas Baleares","Andalucía"],
   },
   {
     specie: "Serissa Phoetida.",
@@ -131,7 +131,7 @@ const species = [
     substratum: "Well draining, use 50% akadama - 50% kiryuzuna.",
     feeding: "Fertilize in low quantities about once or twice monthly in the growth season.",
     photo: "SerissaPhoetida.jpg",
-    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
+    location: ["País Vasco","Galicia","Castilla-La Mancha","Castilla y León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   },
   {
     specie: "Bald Cypress.",
@@ -145,7 +145,7 @@ const species = [
     substratum: "Works rigth in any type of substratum.",
     feeding: "Use always solid organic fertilizer in the growth season.",
     photo: "BaldCypressBonsai.jpg",
-    location: ["Pais Vasco","Galicia","Castilla La Mancha","Castilla León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
+    location: ["País Vasco","Galicia","Castilla-La Mancha","Castilla y León","Madrid","Asturias","Aragón","Extremadura","Navarra","Cantabria","La Rioja"],
   }
 ];
 

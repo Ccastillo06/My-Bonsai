@@ -12,11 +12,12 @@
       <input type="file" name="photo">
     </div>
     <div class="input">
+      <input id="h-city" type="hidden" name="city" value="<%=user.location.city%>">
       <input id="lat" type="hidden" name="lat" value="<%=user.location.lat%>">
       <input id="lng" type="hidden" name="lng" value="<%=user.location.lng%>">
     </div>
     <div class="gglmap">
-      <input id="pac-input" class="controls" type="text" value="<%=user.location.city%>" name="city" placeholder="Search Box">
+      <input id="pac-input" class="controls" type="text" value="<%=user.location.city%>" placeholder="Search Box">
       <div id="map"></div>
     </div>
     <button>Edit</button>

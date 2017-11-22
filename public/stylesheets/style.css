@@ -8,6 +8,7 @@ body {
   padding: 100px;
 }
 
+/* NAVBAR */
 .main-navbar {
   background-color: #26A65B;
   padding: 10px;
@@ -49,6 +50,8 @@ body {
 .navbar-right li {
   margin: 5px 10px;
 }
+
+
 
 /*  GOOGLE MAPS */
 #map {

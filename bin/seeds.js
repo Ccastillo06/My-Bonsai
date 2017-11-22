@@ -155,3 +155,52 @@ Specie.create(species, (err, docs) => {
 
   mongoose.connection.close();
 });
+
+const Maintenance = require('../models/Maintenance');
+
+Maintenance.collection.drop();
+const maintain = [
+  {
+    type: "Pruning",
+    periodicity: 0,
+  },
+  {
+    type: "Defoliated",
+    periodicity: 0,
+  },
+  {
+    type: "Transplant",
+    periodicity: 0,
+  },
+  {
+    type: "Graft",
+    periodicity: 4,
+  },
+  {
+    type: "Subscriber",
+    periodicity: 6,
+  },
+  {
+    type: "Planted",
+    periodicity: 0,
+  },
+  {
+    type: "Wiring",
+    periodicity: 4,
+  },
+  {
+    type: "Elbow",
+    periodicity: 4,
+  },
+  {
+    type: "Pest treatment",
+    periodicity: 6,
+  },
+];
+
+Maintenance.create(maintain, (err, docs) => {
+  if (err){throw err;}
+  console.log("Maintenance created.");
+
+  mongoose.connection.close();
+});

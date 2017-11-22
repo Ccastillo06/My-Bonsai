@@ -11,7 +11,7 @@ const bonsaiSchema = new Schema({
   temperature: String,
   watering: String,
   substratum: String,
-  maintenances: [{type:Schema.Types.ObjectId, ref:'Maintenance'}],
+  maintenances: [{type:Schema.Types.ObjectId, ref:'BonsaiMaintenance'}],
   photo: String,
 });
 

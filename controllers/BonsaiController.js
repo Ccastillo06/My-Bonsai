@@ -1,6 +1,8 @@
 const Bonsai = require("../models/Bonsai");
 const User = require('../models/User');
 const Species = require("../models/Specie");
+const Maintenance = require("../models/Maintenance");
+const BonsaiMaintenance = require("../models/BonsaiMaintenance");
 
 module.exports = {
 
@@ -44,9 +46,50 @@ module.exports = {
     User.findOne({_id: req.user._id})
     .populate('bonArray')
     .then(user => {
-      console.log(user)
       res.render('bonsai/collection', {user: user});
     })
     .catch(() => res.redirect('/profile'));
+  },
+
+  bonsaiDetailsGet: (req,res) => {
+    Bonsai.findOne({_id: req.params.id})
+    .then(bonsai => {
+        res.render('bonsai/details', {bonsai});
+    })
+    .catch(() => res.redirect('/bonsai/collection'));
+  },
+
+  bonsaiMaintenanceGet: (req,res) => {
+    Maintenance.find({})
+    .then (maintenances => {res.render('bonsai/maintenance', {
+      maintenances,
+      id : req.params.id,
+      error: ''
+    });})
+    .catch (() => {res.render('bonsai/maintenance', {error: "Couldn't charge maintenance types"});});
+  },
+
+  bonsaiMaintenancePost: (req,res) => {
+    Maintenance.findOne({"type" : req.body.type})
+    .then(type => {
+      const newMaintenance = new BonsaiMaintenance ({
+        description: req.body.description,
+        type: type.type,
+        periodicity: type.periodicity,
+        date: req.body.date,
+      });
+
+      Bonsai.findByIdAndUpdate(
+          req.params.id,
+          {$push: {"maintenances": {_id: newMaintenance._id}}},
+          {safe: true, new : true}
+        ).then(() => {
+        newMaintenance.save()
+        .then(() => res.redirect('/bonsai/collection/'+req.params.id))
+        .catch(() => res.redirect('/bonsai/collection'));
+      }).catch(e => {
+          res.redirect('/bonsai/collection/'+req.params.id);
+      });
+    });
   },
 };

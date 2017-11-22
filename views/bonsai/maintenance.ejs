@@ -1,0 +1,24 @@
+<% if (error != "") {%>
+  <p><%= error %></p>
+<% } %>
+<div class="new-maintenance-form">
+  <form action="/bonsai/maintenance/<%=id%>" method="POST">
+    <div class="input">
+      <label for="description">Notes:</label><br>
+      <input type="text" name="description" value=''>
+    </div>
+    <div class="dropdown">
+      <label for="name">Select the maintenance:</label><br>
+      <select name="type">
+        <% maintenances.forEach(maintenance => { %>
+          <option value="<%=maintenance.type %>"><%=maintenance.type %></option>
+        <%});%>
+      </select>
+    </div>
+    <div class="input">
+      <label for="date">Date of the work:</label><br>
+      <input type="date" name="date" value=''>
+    </div>
+    <button>Add</button>
+  </form>
+</div>

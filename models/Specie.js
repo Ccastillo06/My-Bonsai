@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const specieSchema = new Schema({
   specie: String,
   scientific_name: String,
-  decription: String,
+  description: String,
   weather: String,
   temperature: String,
   watering: String,

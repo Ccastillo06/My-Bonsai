@@ -1,28 +1,30 @@
-<% if (error != "") {%>
-  <p><%= error %></p>
-<% } %>
-<div class="new-bonsai-form">
-  <form action="/bonsai/new" method="POST" enctype="multipart/form-data">
-    <div class="input">
-      <label for="name">Name</label><br>
-      <input type="text" name="name" value=''>
-    </div>
-    <div class="dropdown">
-      <label for="name">Specie</label><br>
-      <select name="specie">
-        <% species.forEach(specie => { %>
-          <option value="<%=specie.specie %>"><%=specie.specie %></option>
-        <%});%>
-      </select>
-    </div>
-    <div class="input">
-      <label for="age">Age</label><br>
-      <input type="number" name="age" value=''>
-    </div>
-    <div class="input">
-      <label for="photo">Bonsai Picture</label>
-      <input type="file" name="photo">
-    </div>
-    <button>Add</button>
-  </form>
+<div id="newBonsai" class="container">
+  <% if (error != "") {%>
+    <p><%= error %></p>
+  <% } %>
+  <div class="new-bonsai-form">
+    <form action="/bonsai/new" method="POST" enctype="multipart/form-data">
+      <div class="input form-group col-xs-12">
+        <label class="control-label col-xs-2" for="name">Name</label><br>
+          <input type="text" class="form-control"  name="name" value=''>
+      </div>
+      <div class="dropdown form-group col-xs-12">
+        <label class="control-label col-xs-2" for="name">Specie</label><br>
+          <select name="specie" class="form-control" >
+            <% species.forEach(specie => { %>
+              <option value="<%=specie.specie %>"><%=specie.specie %></option>
+            <%});%>
+          </select>
+      </div>
+      <div class="input form-group col-xs-12">
+        <label class="control-label col-xs-2" for="age">Age</label><br>
+          <input type="number" class="form-control"  name="age" value=''>
+      </div>
+      <div class="input form-group col-xs-12" id="photoinput">
+        <label class="control-label" for="photo">Bonsai Picture</label><br>
+        <input type="file" class="btn-file" name="photo">
+      </div>
+      <button class="but btn btn-success btn-lg btn-block">Add</button>
+    </form>
+  </div>
 </div>

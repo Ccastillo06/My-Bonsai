@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
 const config = require('../config/config');
 mongoose.connect(config.db, {useMongoClient: true});
-
 const Specie = require('../models/Specie');
 
 Specie.collection.drop();
@@ -152,7 +152,6 @@ const species = [
 Specie.create(species, (err, docs) => {
   if (err){throw err;}
   console.log("species created.");
-
   mongoose.connection.close();
 });
 

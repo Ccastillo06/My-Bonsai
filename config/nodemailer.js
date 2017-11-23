@@ -17,7 +17,7 @@ module.exports = (user,maintenance) => {
   // Create a 24 hour period.
   startDate = moment(maintenance.date);
   startDate.add(maintenance.periodicity, 'months');
-  endDate = moment(startDate).add(20, 'hours');
+  endDate = moment(startDate).add(23, 'hours');
   startDate = startDate.format('MMMM DD YYYY, h:mm:ss a');
   endDate = endDate.format('MMMM DD YYYY, h:mm:ss a');
 
@@ -36,7 +36,7 @@ module.exports = (user,maintenance) => {
        start: options.start,
        end: options.end,
        summary: options.summary || options.subject,
-       description: options.description || "",
+       description: options.text || "",
     });
     return {
        from: options.from,

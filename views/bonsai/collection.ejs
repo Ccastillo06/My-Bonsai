@@ -1,16 +1,16 @@
-<h2>My Bonsais</h2>
-<% user.bonArray.forEach( e => { %>
-  <div class="bonsai">
-    <h4><%= e.name %></h4>
-    <% if(e.photo == 'bonsaiFiller.png'){%>
-      <img src="/images/<%= e.photo %>" alt="bonsai" height="200">
-    <%} else {%>
-      <img src="/uploads/<%= e.photo %>" alt="bonsai" height="200">
-    <%}%>
-    <p><b>Sprecies: </b><%= e.species %></p>
-    <p><b>Age: </b><%= e.age %></p>
-      <a href="/bonsai/collection/<%=e._id%>"><button>View Details</button></a>
-  </div>
-<% }); %>
-
-<a href="/profile"><button>My Profile</button></a>
+<div id="collection" class="col-xs-10 col-xs-offset-1">
+  <h1>My Bonsais</h1>
+  <% user.bonArray.forEach( e => { %>
+    <div class="bonsai col-md-4">
+      <h2><%= e.name %></h2>
+      <% if(e.photo == 'bonsaiFiller.png'){%>
+        <img src="/images/<%= e.photo %>" alt="bonsai">
+      <%} else {%>
+        <img src="/uploads/<%= e.photo %>" alt="bonsai">
+      <%}%>
+      <p><b>Sprecies: </b><%= e.species %></p>
+      <p><b>Age: </b><%= e.age %></p>
+        <a href="/bonsai/collection/<%=e._id%>"><button class="btn btn-lg btn-link">View Details</button></a>
+    </div>
+  <% }); %>
+</div>

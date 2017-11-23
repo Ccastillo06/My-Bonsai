@@ -2,7 +2,7 @@
   <p><%= error %></p>
 <% } %>
 <div class="container new-maintenance-form">
-  <form action="/bonsai/maintenance/<%=id%>" method="POST" enctype="multipart/form-data">
+  <form action="/bonsai/maintenance/<%=id%>" method="POST" class="col-sm-10 col-sm-offset-1" enctype="multipart/form-data">
     <div class="form-group col-xs-12">
       <label for="description">Notes:</label><br>
       <input type="text" class="form-control" name="description" value=''>
@@ -15,14 +15,14 @@
         <%});%>
       </select>
     </div>
-    <div class="form-group col-xs-12">
+    <div class="form-group col-xs-11">
       <label for="date">Date of the work:</label><br>
-      <input type="date" name="date" value=''>
+      <input type="date" name="date">
     </div>
     <div class="input form-group col-xs-12">
       <label for="photo">Maintenance Photo</label>
-      <input type="file" class="form-control-file" name="photo">
+      <input type="file" class="btn-file" name="photo">
     </div>
-    <button class="but btn btn-success btn-lg btn-block">Add</button>
+    <button class="col-xs-offset-4 col-xs-4 btn btn-success btn-lg">Add</button>
   </form>
 </div>

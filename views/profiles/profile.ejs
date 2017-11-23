@@ -1,6 +1,5 @@
 <div class="profile">
   <div class="container">
-    <div class="row">
       <div class="col-lg-12">
         <div class="card hovercard">
           <div class="cardheader"></div>
@@ -23,46 +22,18 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
 
 <h2 class ="text-center">Recommended Bonsais in your Area</h2>
 <br>
-<<<<<<< HEAD
-<div id="recSpecies" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner myframe" role="listbox">
-    <% species.forEach((e, i) => { %>
-    <% if (i===0) { %>
-      <div class="item active">
-    <% } else { %>
-      <div class="item">
-    <% } %>
-        <img class="carImage" src="/images/bonsais-species/<%=e.photo%>" alt="bonsais">
-        <div class="carousel-caption">
-          <h3 class="visible-md visible-lg"><%= e.specie%></h3>
-          <p class="visible-md visible-lg"><%= e.scientific_name%></p>
-        </div>
-      </div>
-      <%});%>
-  </div>
-  <a class="left carousel-control" href="#recSpecies" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span> <!--For Screen Readers-->
-  </a>
-   <a class="right carousel-control" href="#recSpecies" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-=======
 <div class="slider">
   <% species.forEach(e => { %>
   <figure class="slider__item"><img class="slider__image" src="/images/bonsais-species/<%=e.photo%>"/>
     <figcaption class="slider__caption"><%= e.scientific_name%></figcaption>
   </figure>
   <% }); %>
->>>>>>> 0dd58746be8c96de03c753164ed39af21622f661
 </div>
 <div class="slider__btn"></div>
 <br><br>

@@ -1,41 +1,60 @@
-<div id="details" class="col-xs-10 col-xs-offset-1">
-  <div class="container photomaintenance col-sm-5 col-xs-12">
-    <% if(bonsai.photo == 'bonsaiFiller.png'){ %>
-      <img src="/images/<%=bonsai.photo%>" alt="user-bonsai-photo">
-    <%} else {%>
-      <img src="/uploads/<%=bonsai.photo%>" alt="user-bonsai-photo">
-    <% } %>
+<div id="details" class="col-xs-12">
+  <div class="photomaintenance col-sm-5">
+    <div class="detail-photo">
+      <% if(bonsai.photo == 'bonsaiFiller.png'){ %>
+        <img src="/images/<%=bonsai.photo%>" alt="user-bonsai-photo">
+      <%} else {%>
+        <img src="/uploads/<%=bonsai.photo%>" alt="user-bonsai-photo">
+      <% } %>
+    </div>
+    <div class="">
       <a href="/bonsai/maintenance/<%=bonsai._id%>"><button id="detailbutton" class="btn btn-lg btn-success">Add new maintenance</button></a>
+    </div>
   </div>
 
-  <div class="container detailtext col-sm-6 col-sm-offset-1 col-xs-12">
-    <p><b>Name: </b> <%= bonsai.name%></p><br>
-    <p><b>Specie: </b> <%= bonsai.species%></p><br>
-    <p><b>Scientific-Name: </b> <%= bonsai.scientific_name%></p><br>
-    <p><b>Age: </b> <%= bonsai.age%></p><br>
-    <p><b>Description: </b> <%= bonsai.description%></p><br>
-    <p><b>Weather: </b> <%= bonsai.weather%></p><br>
-    <p><b>Temperature: </b> <%= bonsai.temperature%></p><br>
-    <p><b>Watering: </b> <%= bonsai.watering%></p><br>
-    <p><b>Substratum: </b> <%= bonsai.substratum%></p><br>
+  <div class="detailtext col-sm-6 col-sm-offset-1">
+    <p><b><i class="fa fa-tag"></i> Name: </b> <%= bonsai.name%></p><br>
+    <p><b><i class="fa fa-leaf"></i> Specie: </b> <%= bonsai.species%></p><br>
+    <p><b><i class="fa fa-envira"></i> Scientific-Name: </b> <%= bonsai.scientific_name%></p><br>
+    <p><b><i class="fa fa-hourglass-half"></i> Age: </b> <%= bonsai.age%></p><br>
+    <p><b><i class="fa fa-id-card-o"></i> Description: </b> <%= bonsai.description%></p><br>
+    <p><b><i class="fa fa-sun-o"></i></i> Weather: </b> <%= bonsai.weather%></p><br>
+    <p><b><i class="fa fa-thermometer-three-quarters"></i> Temperature: </b> <%= bonsai.temperature%></p><br>
+    <p><b><i class="fa fa-shower"></i> Watering: </b> <%= bonsai.watering%></p><br>
+    <p><b><i class="fa fa-globe"></i> Substratum: </b> <%= bonsai.substratum%></p><br>
   </div>
 
-  <div class="container">
-    <h2>Maintenances:</h2>
-    <% bonsai.maintenances.forEach( maintenance => { %>
-      <p><b><%= maintenance.date.toString().substring(4, 15)%> - <%= maintenance.type%></b></p>
-      <% if(maintenance.photo == 'workFiller.png'){ %>
-        <img src="/images/<%=maintenance.photo%>" alt="user-bonsai-photo">
-      <%} else {%>
-        <img src="/uploads/<%=maintenance.photo%>" alt="user-bonsai-photo">
-      <% } %>
-      <p><b><%= maintenance.description%></b></p>
-      <% if(maintenance.periodicity == 0){ %>
-        <p>Repeat this work when your little tree needs it</p>
-      <%} else {%>
-        <p>Repeat this work in: <%= maintenance.periodicity%> months</p>
-      <% } %>
-    <% }); %>
-  </div>
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="page-header timeline-total">
+			  <h2>Maintenances:</h2>
+			</div>
+			<ul class="timeline col-sm-10 col-sm-offset-1">
+        <% bonsai.maintenances.forEach( maintenance => { %>
+				<li class="timeline-item">
+					<div class="timeline-badge"><i class="glyphicon glyphicon-tree-deciduous"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title"><%= maintenance.type%></h4>
+							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <%= maintenance.date.toString().substring(4, 15)%></small></p>
+						</div>
+						<div class="timeline-body">
+							<p><%= maintenance.description%></p>
+						</div>
+            <div class="timeline-photos">
+              <% if(maintenance.photo == 'workFiller.png'){ %>
+                <img src="/images/<%=maintenance.photo%>" alt="user-bonsai-photo">
+              <%} else {%>
+                <img src="/uploads/<%=maintenance.photo%>" alt="user-bonsai-photo">
+              <% } %>
+            </div>
+					</div>
+				</li>
+        <% }); %>
+			</ul>
+		</div>
+
+
+
+
 
 </div>

@@ -1,31 +1,32 @@
-<div class="signup-form">
+<div class="container signup-form">
   <form action="/signup" method="POST" enctype="multipart/form-data">
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="username">Username</label><br>
-      <input type="text" name="username" placeholder="BonsaiLover">
+      <input type="text" class="form-control" name="username" placeholder="BonsaiLover">
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="password">Password</label><br>
-      <input type="password" name="password" placeholder="Password">
+      <input type="password" class="form-control" name="password" placeholder="Password">
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="email">Email</label><br>
-      <input type="text" name="email" placeholder="bonsai@bonsai.com">
+      <input type="text" class="form-control" name="email" placeholder="bonsai@bonsai.com">
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="name">Name</label><br>
-      <input type="text" name="name" placeholder="Jon Bonsai">
+      <input type="text" class="form-control" name="name" placeholder="Jon Bonsai">
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="photo">Profile Picture</label>
-      <input type="file" name="photo">
+      <input type="file" class="form-control-file" name="photo">
     </div>
     <div class="input">
       <input id="city" type="hidden" name="city">
       <input id="lat" type="hidden" name="lat">
       <input id="lng" type="hidden" name="lng">
     </div>
-    <button>Sign Up!</button>
+    <br>
+    <button class="but btn btn-success btn-lg btn-block">Sign Up!</button>
   </form>
 </div>
 

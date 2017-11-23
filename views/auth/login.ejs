@@ -1,13 +1,18 @@
-<div class="login-form">
-  <form action="/login" method="POST">
-    <div class="input">
-      <label for="username">Username</label><br>
-      <input type="text" name="username" placeholder="BonsaiLover">
+<div class="container login-form">
+  <form action="/login" method="POST" class="form-horizontal">
+    <div class="input form-group">
+      <label class="control-label col-xs-2" for="username">Username</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="username" placeholder="BonsaiLover">
+      </div>
     </div>
-    <div class="input">
-      <label for="password">Password</label><br>
-      <input type="password" name="password" placeholder="Password">
+    <div class="input form-group">
+      <label class="control-label col-sm-2" for="password">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
     </div>
-    <button>Login!</button>
+    <br>
+    <button class="but btn btn-success btn-lg btn-block">Login!</button>
   </form>
 </div>

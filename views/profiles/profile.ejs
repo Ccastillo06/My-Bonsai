@@ -1,20 +1,26 @@
 <div class="profile">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 avatar">
-        <% if(user.photo == 'logo.png'){ %>
-          <img class="" src="/images/<%=user.photo%>" alt="profile-photo">
-        <%} else {%>
-          <img class="" src="/uploads/<%=user.photo%>" alt="profile-photo">
-        <% } %>
-      </div>
-      <div class="col-sm-6 target">
-        <div class="jumbotron">
-          <h1 class="display-3">Hello <%= user.name %></h1>
-          <p class="lead">Ubication: <%= user.location.city %></p>
-          <hr class="my-4">
-          <a href="/profile/edit"><button class="btn btn-lg btn-link">Edit Profile</button></a>
-          <a href="/bonsai/new"><button class="btn btn-lg btn-link">Add Bonsai</button></a>
+      <div class="col-lg-12">
+        <div class="card hovercard">
+          <div class="cardheader"></div>
+          <div class="avatar">
+            <% if(user.photo == 'logo.png'){ %>
+              <img class="" src="/images/<%=user.photo%>" alt="profile-photo">
+            <%} else {%>
+              <img class="" src="/uploads/<%=user.photo%>" alt="profile-photo">
+            <% } %>
+          </div>
+          <div class="info">
+            <div class="title">
+              <p><%= user.name %></p>
+            </div>
+            <div class="desc"><%= user.location.city %></div>
+          </div>
+          <div class="bottom">
+            <a href="/profile/edit"><button class="btn btn-lg btn-link">Edit Profile</button></a>
+            <a href="/bonsai/new"><button class="btn btn-lg btn-link">Add Bonsai</button></a>
+          </div>
         </div>
       </div>
     </div>
@@ -24,6 +30,7 @@
 
 <h2 class ="text-center">Recommended Bonsais in your Area</h2>
 <br>
+<<<<<<< HEAD
 <div id="recSpecies" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner myframe" role="listbox">
     <% species.forEach((e, i) => { %>
@@ -48,5 +55,14 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+=======
+<div class="slider">
+  <% species.forEach(e => { %>
+  <figure class="slider__item"><img class="slider__image" src="/images/bonsais-species/<%=e.photo%>"/>
+    <figcaption class="slider__caption"><%= e.scientific_name%></figcaption>
+  </figure>
+  <% }); %>
+>>>>>>> 0dd58746be8c96de03c753164ed39af21622f661
 </div>
-<br>
+<div class="slider__btn"></div>
+<br><br>

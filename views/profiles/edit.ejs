@@ -1,15 +1,15 @@
 <% if(errorMessage != '') { %>
   <p><%= errorMessage %></p>
 <% } %>
-<div class="edit-form">
+<div class="container edit-form">
   <form action="/profile/edit" method="POST" enctype="multipart/form-data">
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="name">Name</label><br>
-      <input type="text" name="name" value='<%= user.name %>'>
+      <input type="text" class="form-control" name="name" value='<%= user.name %>'>
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="photo">Profile Picture</label>
-      <input type="file" name="photo">
+      <input type="file" class="form-control-file" name="photo">
     </div>
     <div class="input">
       <input id="h-city" type="hidden" name="city" value="<%=user.location.city%>">
@@ -20,7 +20,8 @@
       <input id="pac-input" class="controls" type="text" value="<%=user.location.city%>" placeholder="Search Box">
       <div id="map"></div>
     </div>
-    <button>Edit</button>
+    <br><br>
+    <button class="but btn btn-success btn-lg btn-block">Edit</button>
   </form>
 </div>
 

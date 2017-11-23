@@ -1,28 +1,28 @@
 <% if (error != "") {%>
   <p><%= error %></p>
 <% } %>
-<div class="new-maintenance-form">
+<div class="container new-maintenance-form">
   <form action="/bonsai/maintenance/<%=id%>" method="POST" enctype="multipart/form-data">
-    <div class="input">
+    <div class="form-group col-xs-12">
       <label for="description">Notes:</label><br>
-      <input type="text" name="description" value=''>
+      <input type="text" class="form-control" name="description" value=''>
     </div>
-    <div class="dropdown">
+    <div class="form-group col-xs-12">
       <label for="name">Select the maintenance:</label><br>
-      <select name="type">
+      <select class= "form-control" name="type">
         <% maintenances.forEach(maintenance => { %>
           <option value="<%=maintenance.type %>"><%=maintenance.type %></option>
         <%});%>
       </select>
     </div>
-    <div class="input">
+    <div class="form-group col-xs-12">
       <label for="date">Date of the work:</label><br>
       <input type="date" name="date" value=''>
     </div>
-    <div class="input">
+    <div class="input form-group col-xs-12">
       <label for="photo">Maintenance Photo</label>
-      <input type="file" name="photo">
+      <input type="file" class="form-control-file" name="photo">
     </div>
-    <button>Add</button>
+    <button class="but btn btn-success btn-lg btn-block">Add</button>
   </form>
 </div>

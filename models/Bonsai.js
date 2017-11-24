@@ -5,14 +5,14 @@ const bonsaiSchema = new Schema({
   name: {type:String, required: true},
   species: {type:String, required: true},
   age: {type: Number, required: true},
-  scientific_name: String,
-  description: String,
-  weather: String,
-  temperature: String,
-  watering: String,
-  substratum: String,
+  scientific_name: {type: String},
+  description: {type: String},
+  weather: {type: String},
+  temperature: {type: String},
+  watering: {type: String},
+  substratum: {type: String},
   maintenances: [{type:Schema.Types.ObjectId, ref:'BonsaiMaintenance'}],
-  photo: String,
+  photo: {type: String},
 });
 
 const Bonsai = mongoose.model('Bonsai', bonsaiSchema);

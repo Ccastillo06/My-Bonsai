@@ -8,10 +8,10 @@ const userSchema = new Schema({
   name: {type:String, required:true},
   location: {
     city: {type: String},
-    lat: Number,
-    lng: Number,
+    lat: {type: Number},
+    lng: {type: Number},
   },
-  photo: String,
+  photo: {type: String},
   bonArray: [{type:Schema.Types.ObjectId, ref:'Bonsai'}],
 });
 

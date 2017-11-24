@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const specieSchema = new Schema({
-  specie: String,
-  scientific_name: String,
-  description: String,
-  weather: String,
-  temperature: String,
-  watering: String,
-  substratum: String,
-  feeding: String,
-  photo: String,
-  location: [String],
+  specie: {type: String},
+  scientific_name: {type: String},
+  description: {type: String},
+  weather: {type: String},
+  temperature: {type: String},
+  watering: {type: String},
+  substratum: {type: String},
+  feeding: {type: String},
+  photo: {type: String},
+  location: [{type: String}],
 });
 
 const Specie = mongoose.model('Specie', specieSchema);
